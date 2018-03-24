@@ -44,7 +44,7 @@ public class DicionariosAndHash {
     }
 
     public static void gravaMatrizArquivo(int[][] matriz) throws FileNotFoundException, UnsupportedEncodingException, IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\yagoz\\Documents\\IFES\\TPA\\Codigo\\Exercicios\\TPA\\DicionariosAndHash\\src\\dicionariosandhash\\resultado.csv"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("src\\dicionariosandhash\\resultado.csv"));
         for(int i = 0; i < matriz.length ; i++){
             for(int j = 0; j < matriz[i].length; j++){
                 writer.write(matriz[i][j] + ";");
@@ -62,7 +62,7 @@ public class DicionariosAndHash {
         int[][] matriz_funcao_hash = new int[100][2];
         zerarMatriz(matriz_funcao_hash);
 
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\yagoz\\Documents\\IFES\\TPA\\Codigo\\Exercicios\\TPA\\DicionariosAndHash\\src\\dicionariosandhash\\nomes.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\dicionariosandhash\\nomes.txt"))) {
             String linha = "";
             while ((linha = br.readLine()) != null) {
                 matriz_funcao_hash[FuncoesHash.FuncaoUm(linha, 100)][0]++;
