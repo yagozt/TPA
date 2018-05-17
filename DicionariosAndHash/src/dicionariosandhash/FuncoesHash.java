@@ -21,7 +21,7 @@ public class FuncoesHash {
     public static int FuncaoDois(String str, int totalElem, int z){
         int somaComponentesAsc = 0;
         for(int i = 0; i < str.length(); i++){
-            somaComponentesAsc += str.charAt(i)*Math.pow(z, i);
+            somaComponentesAsc += ((int)str.charAt(i))*Math.pow(z, i);
         }
         return somaComponentesAsc % totalElem;
     }

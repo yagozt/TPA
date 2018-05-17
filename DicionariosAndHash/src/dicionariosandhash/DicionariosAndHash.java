@@ -7,18 +7,13 @@ package dicionariosandhash;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.WeakHashMap;
 
 /**
  *
@@ -58,21 +53,26 @@ public class DicionariosAndHash {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Map<Integer, String> hashmap = new HashMap<>();
-        int[][] matriz_funcao_hash = new int[100][2];
-        zerarMatriz(matriz_funcao_hash);
-
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\dicionariosandhash\\nomes.txt"))) {
-            String linha = "";
-            while ((linha = br.readLine()) != null) {
-                matriz_funcao_hash[FuncoesHash.FuncaoUm(linha, 100)][0]++;
-                matriz_funcao_hash[FuncoesHash.FuncaoDois(linha, 100, 33)][1]++;
-            }
-            gravaMatrizArquivo(matriz_funcao_hash);
-            System.out.println("Arquivo salvo com sucesso.");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+//        Map<Integer, String> hashmap = new HashMap<>();
+//        int MAX = 101;
+//        int[][] matriz_funcao_hash = new int[MAX][2];
+//        zerarMatriz(matriz_funcao_hash);
+//
+//        try (BufferedReader br = new BufferedReader(new FileReader("src\\dicionariosandhash\\nomes.txt"))) {
+//            String linha;
+//            while ((linha = br.readLine()) != null) {
+//                matriz_funcao_hash[FuncoesHash.FuncaoUm(linha, MAX)][0]++;
+//                matriz_funcao_hash[FuncoesHash.FuncaoDois(linha, MAX, 33)][1]++;
+//            }
+//            gravaMatrizArquivo(matriz_funcao_hash);
+//            System.out.println("Arquivo salvo com sucesso.");
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+        System.out.println((7-44)%7);
+        System.out.println((44)%13);
+        System.out.println((7-5)%7);
+        
         
     }
 
